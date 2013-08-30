@@ -1,0 +1,36 @@
+public class ReverseString {
+
+	
+	public ReverseString(String wordToReverse) {
+
+		reverse(wordToReverse);
+
+	}
+
+	
+	
+	public String reverse(String myWord) {
+
+		String reversedString = "";
+
+		for (int charsRemoved = wordToReverse.length(); charsRemoved != 0; charsRemoved--) {
+			
+			reversedString= wordToReverse.substring(0,1)+reversedString;
+			
+			wordToReverse = wordToReverse.substring(1,wordToReverse.length());
+
+		}
+				
+		return reversedString;
+
+	}
+
+	
+	
+	public static void main(String[] args) {
+
+		ReverseString tryMe = new ReverseString("please");
+
+	}
+
+}

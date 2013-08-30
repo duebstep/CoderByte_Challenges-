@@ -1,0 +1,24 @@
+
+public class Factorial {
+	
+	public Factorial() {
+		
+	}
+	
+	
+	public int factor(int myNumber) {
+		
+		for (int numberBelow = myNumber-1; numberBelow >0; numberBelow--) {
+			
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Factorial myFactorial = new Factorial();
+		
+		System.out.println(myFactorial.Factor(8));
+	}
+}

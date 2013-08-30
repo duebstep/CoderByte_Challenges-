@@ -1,0 +1,33 @@
+/* 
+ * The challenge question was "Factor"
+ */
+
+
+public class Factorial {
+	
+	public Factorial() {
+		
+	}
+	
+	
+	public int factor(int myNumber) {
+		
+		int factoredNumber = myNumber; 
+		
+		for (int numberBelow = myNumber-1; numberBelow >0; numberBelow--) {
+
+			factoredNumber = factoredNumber*numberBelow;
+			
+		}
+		
+		return factoredNumber;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Factorial myFactorial = new Factorial();
+		
+		System.out.println(myFactorial.factor(20));
+	}
+}

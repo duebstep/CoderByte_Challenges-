@@ -1,0 +1,58 @@
+
+public class LongestWord {
+
+	String theLongest = ""; 
+
+
+
+	public LongestWord(String sentence) {
+
+		findLongest(sentence);
+
+		System.out.println(theLongest);
+
+	}
+
+
+
+	public void findLongest(String sentence) { 
+		if (sentence.contains(" ") == true) {
+			
+			String currentWord = sentence.substring(0,sentence.indexOf(" "));
+
+			if (this.theLongest.length() < currentWord.length()) {
+
+				this.theLongest = currentWord;
+
+			}
+
+			if (sentence.indexOf(" ")+1 != sentence.length()){
+
+				sentence = sentence.substring(sentence.indexOf(" ")+1,sentence.length());
+
+				findLongest(sentence);
+
+			}
+		}
+		else if (sentence.length()>0) {
+			
+			if (this.theLongest.length() < sentence.length()) {
+				
+				this.theLongest = sentence;
+			
+			}
+			
+		}
+
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		LongestWord theLongestWord = new LongestWord("This is a TESTER for the People to Look at balls ");
+
+	}
+
+}

@@ -1,0 +1,50 @@
+
+public class LongestWord {
+
+	String theLongest = ""; 
+
+
+
+	public LongestWord(String sentence) {
+
+		findLongest(sentence);
+
+		System.out.println(theLongest);
+
+	}
+
+
+
+	public void findLongest(String sentence) { 
+
+		String currentWord = sentence.substring(0,sentence.indexOf(" "));
+		System.out.println(currentWord);
+		
+		if (this.theLongest.length() < currentWord.length()) {
+
+			this.theLongest = sentence.substring(currentWord+" ", sentence.length());
+			System.out.println(this.theLongest);
+		}
+		
+		if (sentence.indexOf(" ") != sentence.length()){
+
+			sentence = sentence.substring(sentence.indexOf(" "),sentence.length());
+
+			findLongest(sentence);
+
+		}
+
+
+	
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		LongestWord theLongestWord = new LongestWord("This is a TESTER for the People to Look at");
+
+	}
+
+}

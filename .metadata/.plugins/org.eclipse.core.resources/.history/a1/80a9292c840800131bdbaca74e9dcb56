@@ -1,0 +1,52 @@
+public class ReverseString {
+
+	
+	public ReverseString(String wordToReverse) {
+
+		System.out.println(wordToReverse);
+
+		reverse(wordToReverse);
+
+	}
+
+	
+	
+	public String reverse(String wordToReverse) {
+
+		System.out.println(wordToReverse);
+
+		String reversedString = "";
+
+//		int charsRemoved = wordToReverse.length();
+//		
+//		while(charsRemoved != 0){
+//		
+//			reversedString= wordToReverse.substring(0,1) + reversedString;
+//			
+//			wordToReverse = wordToReverse.substring(1, wordToReverse.length());
+//
+//			charsRemoved--;
+//		
+//		}
+		
+		for (int charsRemoved= wordToReverse.length(); charsRemoved < 0; charsRemoved--) {
+			System.out.println(charsRemoved+"where we at");
+
+			reversedString= wordToReverse.substring(0,1)+reversedString;
+			wordToReverse = wordToReverse.substring(1,wordToReverse.length());
+
+		}
+				
+		return reversedString+"Final";
+
+	}
+
+	
+	
+	public static void main(String[] args) {
+
+		ReverseString tryMe = new ReverseString("please");
+		System.out.println(tryMe);
+	}
+
+}

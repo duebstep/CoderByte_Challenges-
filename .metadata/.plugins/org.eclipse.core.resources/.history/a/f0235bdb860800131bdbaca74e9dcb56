@@ -1,0 +1,47 @@
+/*
+ * This challenge question is as follows 
+ * "For this challenge you will be reversing a string."
+ */
+
+public class ReverseString {
+
+	
+	public ReverseString() {
+
+	}
+
+	
+	/*
+	 * My implementation runs in O(n) time. 
+	 * It loops through the string and places the first character of the string
+	 * in my String "reversedString" and then removes the first character from the 
+	 * argument. Looping until there are no more characters in the string.
+	 * This takes in one parameter String.
+	 */
+	public String reverse(String myWord) {
+
+		String reversedString = "";
+
+		for (int charsRemoved = myWord.length(); charsRemoved != 0; charsRemoved--) {
+			
+			reversedString= myWord.substring(0, 1) + reversedString;
+			
+			myWord = myWord.substring(1, myWord.length());
+
+		}
+				
+		return reversedString;
+
+	}
+
+	
+	
+	public static void main(String[] args) {
+
+		ReverseString tryMe = new ReverseString("hasdlfkj");
+
+		tryMe.reverse("Hello World");
+
+	}
+
+}

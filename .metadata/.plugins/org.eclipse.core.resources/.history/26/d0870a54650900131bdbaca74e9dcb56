@@ -1,0 +1,25 @@
+
+public class LetterChanges {
+
+	public LetterChanges() {
+
+	}
+	
+	public String change(String myWord){
+		
+		return myWord;
+	}
+	
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		LetterChanges tryChange = new LetterChanges();
+		
+		tryChange.change();
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class Factorial {
+	
+	public Factorial() {
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Factorial myFactorial = new Factorial();
+		
+		System.out.println(Factorial);
+	}
+}
